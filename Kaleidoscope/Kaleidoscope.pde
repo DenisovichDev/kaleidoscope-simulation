@@ -1,4 +1,3 @@
-int numShapes;
 float mx;
 float my;
 float pmx;
@@ -18,12 +17,11 @@ void setup(){
 
 }
 
-void mousePressed(){
+void keyPressed(){
   walkers.add(new Walker());
 }
 
 void draw(){
-  //background(255);
   push();
   translate(width/2, height/2);
   
@@ -66,9 +64,7 @@ void paint(){
     float d = abs(dist(pmx, pmy, mx, my));
     float sw = abs(map(d, 0, 20, 10, 1));
     if (sw > 10) sw = 10;
-    //println(sw);
     strokeWeight(sw);
-    //stroke(255, 100);
     line(mx, my, pmx, pmy);
     push();
     scale(-1, 1);
