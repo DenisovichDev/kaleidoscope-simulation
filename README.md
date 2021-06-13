@@ -9,7 +9,8 @@ Click [here](https://youtu.be/BD4Y-88ryvE) for a preview of the programme.
 This programme is made using [Processing](http://processing.org/). You'll need to install Processing to run this programme.
 ### Instructions:
 * Install Processing.
-* Clone this repo in your computer using this command: `https://github.com/Ivan-Denisovich-py/kaleidoscope-simulation.git`
+* Clone this repo in your computer using this command:
+`git clone https://github.com/Ivan-Denisovich-py/kaleidoscope-simulation.git`
 * Run Kaleidoscope.pde
 
 <!-- ## Some screenshots:
