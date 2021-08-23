@@ -9,8 +9,8 @@ float angle = TWO_PI/symmetry;
 ArrayList<Walker> walkers;
 
 void setup(){
-  background(255);
   size(650, 650);
+  background(51);
   translate(width/2, height/2);
   
   walkers = new ArrayList<Walker>();
