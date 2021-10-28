@@ -1,7 +1,9 @@
 # Keleidoscope Simulation with Perlin Noise
 
+<p float="left">
 <img src="screenshots/screenshot-1.png" width="300" alt="screenshot" />
 <img src="screenshots/screenshot-2.png" width="300" alt="screenshot" />
+</p>
 
 This is a project based on [a Coding Train video](https://youtu.be/R3C2giDfmO8) by [Dan Shiffman](https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw). This programme is written using [Processing](processing.org).
 
