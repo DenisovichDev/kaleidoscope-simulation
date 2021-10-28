@@ -8,31 +8,34 @@ float angle = TWO_PI/symmetry;
 
 ArrayList<Walker> walkers;
 
-void setup(){
-  size(650, 650);
+void setup() {
+  size(1500, 600);
   background(51);
   translate(width/2, height/2);
-  
+
   walkers = new ArrayList<Walker>();
-
 }
 
-void keyPressed(){
-  walkers.add(new Walker());
+void keyPressed() {
+  if (key == 'c') {
+    saveFrame("captures/screenCapture-###.png");
+  } else {
+    walkers.add(new Walker());
+  }
 }
 
-void draw(){
+void draw() {
   push();
   translate(width/2, height/2);
-  
+
   mx = mouseX - width/2;
   my = mouseY - height/2;
   pmx = pmouseX - width/2;
   pmy = pmouseY - height/2;
-  
-  
-  if (mousePressed){  
-    for (int i = 0; i < symmetry; i++){
+
+
+  if (mousePressed) {  
+    for (int i = 0; i < symmetry; i++) {
       rotate(angle);
       int r = int(map(noise(xOff), 0, 1, 0, 255));
       int g = int(map(noise(xOff + 1000), 0, 1, 0, 255));
@@ -41,10 +44,10 @@ void draw(){
       paint();
     }
   }
-  
-    for (int i = 0; i < symmetry; i++){
+
+  for (int i = 0; i < symmetry; i++) {
     rotate(angle);
-    for (Walker w : walkers){
+    for (Walker w : walkers) {
       w.show();
       w.update();
       push();
@@ -54,22 +57,20 @@ void draw(){
       pop();
     }
   }
-  
+
   pop();
   xOff += 0.1;
 }
 
-void paint(){
+void paint() {
 
-    float d = abs(dist(pmx, pmy, mx, my));
-    float sw = abs(map(d, 0, 20, 10, 1));
-    if (sw > 10) sw = 10;
-    strokeWeight(sw);
-    line(mx, my, pmx, pmy);
-    push();
-    scale(-1, 1);
-    line(mx, my, pmx, pmy);
-    pop();
-    
-    
+  float d = abs(dist(pmx, pmy, mx, my));
+  float sw = abs(map(d, 0, 20, 10, 1));
+  if (sw > 10) sw = 10;
+  strokeWeight(sw);
+  line(mx, my, pmx, pmy);
+  push();
+  scale(-1, 1);
+  line(mx, my, pmx, pmy);
+  pop();
 }
